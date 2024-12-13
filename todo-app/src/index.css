@@ -62,14 +62,14 @@ body {
   min-width: 0; 
   word-wrap: break-word; 
   margin-right: 10px; 
-  max-height: 4.5em; /* Keep height in check */
-  overflow: hidden; /* Hide overflow */
+  max-height: 4.5em; 
+  overflow: hidden; 
 }
 
 .button-container {
-  display: flex; /* Ensure buttons are in a row */
-  justify-content: flex-start; /* Align to the left */
-  margin-top: 10px; /* Space above buttons */
+  display: flex; 
+  justify-content: flex-start; 
+  margin-top: 10px; 
 }
 
 .todo button {
@@ -80,7 +80,7 @@ body {
 }
 
 .button-complete svg, .button-edit svg, .button-delete svg, .button-done svg {
-  font-size: 1.5rem; /* Set icon size */
+  font-size: 1.5rem; 
 }
 
 .button-complete svg {
@@ -104,7 +104,7 @@ body {
 
 .button-done svg {
   font-size: 1.5rem;
-  color: #4caf50; /* Customize color */
+  color: #4caf50; 
 }
 
 @media (max-width: 768px) {

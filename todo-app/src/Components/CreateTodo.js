@@ -23,9 +23,9 @@ function CreateTodo() {
             style={{
                 padding: '20px', 
                 borderRadius: '15px', 
-                width: '100%', // Full width
-                margin: '20px 0', // No side margins for the Paper component
-                boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.1)'  // Shadow for form container
+                width: '100%', 
+                margin: '20px 0', 
+                boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.1)'  
             }}
         >
             <form onSubmit={handleSubmit}>
@@ -36,16 +36,16 @@ function CreateTodo() {
                         onChange={(e) => setSubject(e.target.value)} 
                         style={{ 
                             width: '100%', 
-                            minHeight: '40px', // Initial height
-                            maxHeight: '150px', // Maximum height
+                            minHeight: '40px', 
+                            maxHeight: '150px', 
                             fontSize: '18px', 
                             padding: '10px',
                             borderRadius: '5px',
-                            border: '1px solid #ccc', // Border for better visibility
-                            boxSizing: 'border-box' // Include padding in width calculation
+                            border: '1px solid #ccc', 
+                            boxSizing: 'border-box' 
                         }} 
-                        minRows={1} // Minimum number of rows
-                        maxRows={4} // Maximum number of rows
+                        minRows={1} 
+                        maxRows={4} 
                     />
                 </Box>
                 <Button 
@@ -58,7 +58,7 @@ function CreateTodo() {
                         color: 'white', 
                         fontWeight: 'bold',
                         padding: '10px 0',
-                        borderRadius: '10px'  // Rounded button edges
+                        borderRadius: '10px'  
                     }}
                 >
                     Add Todo
@@ -69,7 +69,3 @@ function CreateTodo() {
 }
 
 export default CreateTodo;
-
-
-
-

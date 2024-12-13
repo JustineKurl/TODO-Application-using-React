@@ -14,28 +14,28 @@ export default function Todo({
   const [newTitle, setNewTitle] = useState(todo.Subject);
   const [isEditing, setIsEditing] = useState(false);
 
-  // Update newTitle when entering edit mode
+ 
   useEffect(() => {
     if (isEditing) {
-      setNewTitle(todo.Subject); // Set newTitle to current todo subject when editing
+      setNewTitle(todo.Subject); 
     }
   }, [isEditing, todo.Subject]);
 
   const handleChange = (e) => {
-    setNewTitle(e.target.value); // Update title on change
+    setNewTitle(e.target.value); 
   };
 
   const handleEditSubmit = (e) => {
-    e.preventDefault(); // Prevent default form submission behavior
-    handleEdit(todo, newTitle); // Pass the updated title to handleEdit
-    setIsEditing(false); // Exit editing mode
+    e.preventDefault(); 
+    handleEdit(todo, newTitle); 
+    setIsEditing(false); 
   };
 
   return (
     <div className="todo">
       {isEditing ? (
         <>
-          {/* Container for all buttons */}
+          {}
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '10px' }}>
             <Button
               type="submit"
@@ -63,13 +63,13 @@ export default function Todo({
                 fontSize: '1.2rem',
                 border: '1px solid #ccc',
                 borderRadius: '5px',
-                marginBottom: '10px', // Space between input and buttons
-                boxSizing: 'border-box', // Include padding and border in element's total width and height
+                marginBottom: '10px', 
+                boxSizing: 'border-box', 
               }}
               value={newTitle}
               onChange={handleChange}
-              minRows={2} // Minimum number of rows
-              maxRows={4} // Maximum number of rows
+              minRows={2} 
+              maxRows={4} 
             />
           </form>
         </>
@@ -83,14 +83,14 @@ export default function Todo({
           }}>
             {todo.Subject}
           </div>
-          {/* Container for all buttons */}
+          {}
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: '10px' }}>
             <button className="button-complete" onClick={() => toggleComplete(todo)}>
               <CheckCircleIcon id="i" />
             </button>
             <button
               className="button-edit"
-              onClick={() => setIsEditing(!isEditing)} // Toggle editing mode
+              onClick={() => setIsEditing(!isEditing)} 
             >
               <EditIcon id="i" />
             </button>
@@ -103,22 +103,3 @@ export default function Todo({
     </div>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
